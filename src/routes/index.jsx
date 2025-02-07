@@ -7,6 +7,7 @@ import Notifications from '../pages/Notifications';
 const mainRoutes = [
   { index: true, path: '/dashboard', element: <Dashboard /> },
   { path: '/dashboard/add-item', element: <AddItem /> },
+  { path: '/dashboard/statistic', element: <Statistics /> },
   { path: '/dashboard/settings', element: <Settings /> },
   { path: '/dashboard/notifications', element: <Notifications /> },
 ];
