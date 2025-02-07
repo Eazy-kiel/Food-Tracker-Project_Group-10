@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { useState, useEffect } from "react";
 import { PieChart, Pie, Cell, Tooltip, BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend, ResponsiveContainer } from "recharts";
 
@@ -61,3 +63,4 @@ const Statistics = () => {
   const COLORS = ["#d93125", "#8884d8"]; 
 
   return (
+>>>>>>> 893cea773ce31b664a18e4a40a65fbbbe7cbf268
