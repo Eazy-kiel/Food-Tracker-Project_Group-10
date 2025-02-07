@@ -22,6 +22,11 @@ const Navbar = () => {
       url: '/dashboard/add-item',
     },
     {
+      name: 'Statistics',
+      icon: <MdAdd className='text-current w-[18px] h-[18px]' />,
+      url: '/dashboard/statistic',
+    },
+    {
       name: 'Notifications',
       url: '/dashboard/notifications',
       icon: <MdNotifications className='text-current w-[18px] h-[18px]' />,
