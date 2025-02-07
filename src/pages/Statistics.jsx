@@ -61,38 +61,3 @@ const Statistics = () => {
   const COLORS = ["#d93125", "#8884d8"]; 
 
   return (
-    <div className="py-8 px-4 bg-white">
-      <h2 className="text-3xl">Statistics</h2>
-      <div className="mt-7 mb-3">
-      <p className="text-2xl mt-3 mb-3">PieChart</p>
-        <ResponsiveContainer width="100%" height={500}>
-          <PieChart>
-            <Pie data={pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={200} label>
-              {pieData.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-              ))}
-            </Pie>
-            <Tooltip />
-          </PieChart>
-        </ResponsiveContainer>
-      </div>
- <div>
- <p className="text-2xl mt-3 mb-3">BarChart</p>
-      <div className="w-3/4 flex justify-center">
-        <ResponsiveContainer width="100%" height={800}>
-          <BarChart data={data.barChart}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="itemName" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="count" fill="#8884d8" />
-          </BarChart>
-        </ResponsiveContainer>
-      </div>
-    </div>
-    </div>
-  );
-};
-
-export default Statistics;

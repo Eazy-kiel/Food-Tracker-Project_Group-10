@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import DropdownInput from '../components/Dropdown';
 
 const AddItem = () => {
   const [name, setName] = useState('');
   const [category, setCategory] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
+  const [datePurchased, setDatePurchased] = useState('');
   const [notes, setNotes] = useState('');
   const [userId, setUserId] = useState('');
 
@@ -48,7 +50,7 @@ const AddItem = () => {
   };
 
   return (
-    <div className='w-screen h-screen flex flex-col justify-center items-center py-20'>
+    <div className='w-full h-full flex flex-col justify-center items-center py-20'>
       <div className='flex flex-col gap-3 rounded-md p-8 shadow-lg w-[300px] bg-white'>
         <h2 className='text-lg font-bold text-center'>Add Item</h2>
 
@@ -62,13 +64,22 @@ const AddItem = () => {
           className='border p-2 rounded-md w-full'
         />
 
-        <label htmlFor='category'>Category</label>
-        <input
+        <label htmlFor='category'>Category {<DropdownInput/>}</label>
+        {/* <input
           id='category'
           type='text'
           value={category}
           onChange={e => setCategory(e.target.value)}
           placeholder='Enter category'
+          className='border p-2 rounded-md w-full'
+        /> */}
+
+        <label htmlFor='expiryDate'>Date Purchased</label>
+        <input
+          id='datePurchased'
+          type='date'
+          value={datePurchased}
+          onChange={e => setDatePurchased(e.target.value)}
           className='border p-2 rounded-md w-full'
         />
 
@@ -80,6 +91,7 @@ const AddItem = () => {
           onChange={e => setExpiryDate(e.target.value)}
           className='border p-2 rounded-md w-full'
         />
+
 
         <label htmlFor='notes'>Notes (Optional)</label>
         <input

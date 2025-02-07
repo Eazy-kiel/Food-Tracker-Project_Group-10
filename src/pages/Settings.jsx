@@ -6,7 +6,7 @@ const Settings = () => {
     const [email, setEmail] = useState('');
 
   return (
-    <div className='w-screen h-screen py-5 flex flex-col items-center'>
+    <div className='w-full h-full py-5 flex flex-col items-center'>
       <div className='p-6  w-[40%]'>
       <h1 className='font-bold text-lg mb-4'>Settings</h1>
 
@@ -14,7 +14,7 @@ const Settings = () => {
       <div className=' p-3 shadow-lg rounded-lg mb-5'>
         <p className='font-bold text-xs mb-3'>Profile Settings</p>
         
-        <label className='text-xs'>Name</label>
+        <label className='text-xs'>Username</label>
          <FormInput
         value={name}
         placeholder='John Doe'
