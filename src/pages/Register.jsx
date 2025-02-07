@@ -9,7 +9,7 @@ import FormInput from '../components/FormInput';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [fullName, setFullName] = useState('');
+  const [username, setUsername] = useState('');
   const navigate = useNavigate();
 
   const handleSignup = async (e) => {
@@ -21,7 +21,7 @@ const Login = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ fullname: fullName, email, password }),
+        body: JSON.stringify({ username: username, email, password }),
       });
   
       const data = await response.json();
@@ -45,14 +45,14 @@ const Login = () => {
         <img src={HouseImage} alt='leaf logo' className='block mx-auto w-7 h-6' />
         <p className=' text-lg text-center font-bold'>Register</p>
 
-        <label htmlFor='email'>Full Name</label>
+        <label htmlFor='email'>Username</label>
         <FormInput
-          id='fullName'
+          id='username'
           type='text'
-          value={fullName}
+          value={username}
           autoComplete='username'
-          placeholder='Enter your fullName'
-          onChange={e => setFullName(e.target.value)}
+          placeholder='Enter your Uername'
+          onChange={e => setUsername(e.target.value)}
         />
 
         <label htmlFor='email'>Email</label>
@@ -83,7 +83,7 @@ const Login = () => {
         <p className='text-gray-500 text-sm mx-auto'>
           Have an account?&nbsp;
           <Link to='/Login' className='text-green-400'>
-            Sign up
+           Login
           </Link>
         </p>
       </div>
