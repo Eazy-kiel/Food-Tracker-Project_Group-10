@@ -40,7 +40,13 @@ const Login = () => {
   
 
   return (
-    <div className='w-screen h-screen flex flex-col justify-center items-center py-20'>
+    <div className='w-screen h-screen flex '>
+      <div className='w-1/2 h-full bg-[url("https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")] flex justify-center items-center bg-no-repeat bg-center bg-cover'>
+        
+      </div>
+
+      <div className='w-1/2 h-full flex  items-center'>
+      <div className='w-screen h-screen flex flex-col justify-center items-center py-20'>
       <div className='flex flex-col gap-3 rounded-md p-8 shadow-lg w-[300px]'>
         <img src={HouseImage} alt='leaf logo' className='block mx-auto w-7 h-6' />
         <p className=' text-lg text-center font-bold'>Register</p>
@@ -51,7 +57,7 @@ const Login = () => {
           type='text'
           value={username}
           autoComplete='username'
-          placeholder='Enter your Uername'
+          placeholder='Enter your Username'
           onChange={e => setUsername(e.target.value)}
         />
 
@@ -87,8 +93,19 @@ const Login = () => {
           </Link>
         </p>
       </div>
+    </div></div>
     </div>
   );
 };
 
 export default Login;
+
+
+
+
+
+
+
+
+
+
